@@ -24,5 +24,9 @@ export const createBoard =(card) => {
         listBoard[index] = listBoard[i];
         listBoard[i] = item;
     }
+    listBoard.map((item, index)=> {
+        item = { id: index, ...item };
+        return item;
+    })
     return listBoard;
 };

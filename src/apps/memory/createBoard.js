@@ -18,5 +18,11 @@ export const createBoard =(card) => {
     listBoard = [...listBoard, item1, item2];
     count++;
     }
+    for (let i=0; i< listBoard.length; i++) {
+        let index = Math.ceil(Math.random() * listBoard.length -1);
+        let item = listBoard(index);
+        listBoard[index] = listBoard[i];
+        listBoard[i] = item;
+    }
     return listBoard;
 };

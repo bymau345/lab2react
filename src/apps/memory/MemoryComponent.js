@@ -2,7 +2,7 @@ import React from "react";
 import { createBoard } from "./createBoard";
 import "./styles.css";
 export const MemoryComponent = () => {
-    const list = createBoard(10);
+    const list = createBoard(50);
     console.log(list);
     return (
     <div>

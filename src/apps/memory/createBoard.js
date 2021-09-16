@@ -12,15 +12,16 @@ export const createBoard =(card) => {
         state: false, 
         done: false,
         key: `card_${i}`,
+        styles: "item",
     };
 
     let item2 = {...item1 };
     listBoard = [...listBoard, item1, item2];
     count++;
     }
-    for (let i=0; i< listBoard.length; i++) {
+    for (let i=0; i<listBoard.length; i++) {
         let index = Math.ceil(Math.random() * listBoard.length -1);
-        let item = listBoard(index);
+        let item = listBoard[index];
         listBoard[index] = listBoard[i];
         listBoard[i] = item;
     }
